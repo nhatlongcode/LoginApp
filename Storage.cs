@@ -65,7 +65,7 @@ namespace LoginApp
             return true;
         }
 
-        public static Storage Instance
+        public static Storage Instance // singleton
         {
             get
             {
@@ -74,7 +74,7 @@ namespace LoginApp
             }
         }
 
-        public static string MD5Hash(string input)
+        public string MD5Hash(string input)
         {
             StringBuilder hash = new StringBuilder();
             MD5CryptoServiceProvider md5provider = new MD5CryptoServiceProvider();

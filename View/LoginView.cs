@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LoginApp.Presenter;
 using System.IO;
 
 namespace LoginApp.View
@@ -38,7 +39,7 @@ namespace LoginApp.View
 
         private void LogButton_Click(object sender, EventArgs e)
         {
-            if (!File.Exists("User.txt")) File.Create("User.txt");
+            LoginPresenter logPresenter = new LoginPresenter()
         }
     }
 }

@@ -12,7 +12,7 @@ namespace LoginApp.Respone
     class LoginRespone : IRespone<UserEnt>
     {
         ILoginView view;
-        LoginRespone(ILoginView view)
+        public LoginRespone(ILoginView view)
         {
             this.view = view;
         }

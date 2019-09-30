@@ -1,0 +1,12 @@
+D:\LoginApp\bin\Debug\LoginApp.exe.config
+D:\LoginApp\bin\Debug\LoginApp.exe
+D:\LoginApp\bin\Debug\LoginApp.pdb
+D:\LoginApp\obj\Debug\LoginApp.csprojAssemblyReference.cache
+D:\LoginApp\obj\Debug\LoginApp.Properties.Resources.resources
+D:\LoginApp\obj\Debug\LoginApp.csproj.GenerateResource.cache
+D:\LoginApp\obj\Debug\LoginApp.csproj.CoreCompileInputs.cache
+D:\LoginApp\obj\Debug\LoginApp.exe
+D:\LoginApp\obj\Debug\LoginApp.pdb
+D:\LoginApp\obj\Debug\LoginApp.View.LoginView.resources
+D:\LoginApp\obj\Debug\LoginApp.View.NotiView.resources
+D:\LoginApp\obj\Debug\LoginApp.View.RegisterView.resources

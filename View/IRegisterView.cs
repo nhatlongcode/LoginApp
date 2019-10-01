@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LoginApp.View
 {
-    interface IRegisterView : IBaseView
+    public interface IRegisterView : IBaseView
     {
         string getUsername();
         string getPassword();

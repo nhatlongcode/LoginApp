@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LoginApp.View
 {
-    interface INotiView : IBaseView
+    public interface INotiView : IBaseView
     {
     }
 }

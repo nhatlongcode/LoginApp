@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LoginApp.Presenter;
 
 namespace LoginApp.View
 {
@@ -36,6 +37,18 @@ namespace LoginApp.View
         public string getConfirm()
         {
             return txtRegConfirm.Text;
+        }
+
+        private void RegButton_Click(object sender, EventArgs e)
+        {
+            RegisterPresenter presenter = new RegisterPresenter(this);
+            presenter.DoRegister();
+        }
+
+        protected override void OnClosing(CancelEventArgs e)
+        {
+            base.OnClosing(e);
+            _previous.Show();
         }
     }
 }

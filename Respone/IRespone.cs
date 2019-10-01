@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LoginApp.Respone
 {
-    interface IRespone<T>
+    public interface IRespone<T>
     {
         void OnSuccess(T data);
 

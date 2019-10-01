@@ -113,6 +113,7 @@
             this.RegButton.TabIndex = 7;
             this.RegButton.Text = "Register";
             this.RegButton.UseVisualStyleBackColor = true;
+            this.RegButton.Click += new System.EventHandler(this.RegButton_Click);
             // 
             // RegisterView
             // 

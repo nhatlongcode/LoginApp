@@ -10,7 +10,7 @@ using LoginApp.Respone;
 
 namespace LoginApp.Presenter
 {
-    class LoginPresenter : ILoginPresenter
+    public class LoginPresenter : ILoginPresenter
     {
         ILoginView view;
         public LoginPresenter(ILoginView view)
@@ -21,7 +21,7 @@ namespace LoginApp.Presenter
         {
             string username = view.getUsername();
             string password = view.getPassword();
-            Model.Model.Login(username, password, new LoginRespone(view));
+            Model.Model.Login(username, password, new LoginRespone(this.view));
         }
     }
 }

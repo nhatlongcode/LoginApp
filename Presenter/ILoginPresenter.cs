@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LoginApp.Presenter
 {
-    interface ILoginPresenter
+    public interface ILoginPresenter
     {
         void DoLogin();
     }

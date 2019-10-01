@@ -9,7 +9,7 @@ using LoginApp.Respone;
 
 namespace LoginApp.Presenter
 {
-    class RegisterPresenter : IRegisterPresenter
+    public class RegisterPresenter : IRegisterPresenter
     {
         IRegisterView view;
 

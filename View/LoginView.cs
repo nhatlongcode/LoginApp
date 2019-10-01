@@ -34,12 +34,14 @@ namespace LoginApp.View
 
         private void RegButton_Click(object sender, EventArgs e)
         {
-            RegisterPresenter regPresenter = new RegisterPresenter(this);
+            this.Hide();
+            new RegisterView(this).Show();
+
         }
 
         private void LogButton_Click(object sender, EventArgs e)
         {
-           LoginPresenter logPresenter = new LoginPresenter(this);
+           ILoginPresenter logPresenter = new LoginPresenter(this);
            logPresenter.DoLogin();
         }
     }

@@ -7,7 +7,7 @@ using System.Windows.Forms;
 
 namespace LoginApp.View
 {
-    interface IBaseView
+    public interface IBaseView
     {
         Form form {get;}
     }

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 
 namespace LoginApp.Respone
 {
-    class RegisterRespone : IRespone<UserEnt>
+    public class RegisterRespone : IRespone<UserEnt>
     {
         IRegisterView view;
         public RegisterRespone(IRegisterView view)
@@ -19,7 +19,10 @@ namespace LoginApp.Respone
 
         public void OnSuccess(UserEnt data)
         {
-
+            //INotiView notiView = new NotiView(this.view.form, data);
+            this.view.form.Hide();
+            //notiView.form.Show();
+            new NotiView(Application.OpenForms[0], data).Show();
         }
 
         public void OnFail(string msgs)

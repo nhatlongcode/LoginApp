@@ -7,16 +7,16 @@ using LoginApp.Respone;
 using LoginApp.Entities;
 namespace LoginApp.Model
 {
-    class Model
+    public class Model
     {
         public static void Login(string username, string password,IRespone<UserEnt> respone)
         {
-            username.Trim().ToUpper();
-            UserEnt user = new UserEnt();
-            Storage.Instance.getUser(username);
+            username = username.Trim().ToUpper();
             try
             {
-                if (user == null || Storage.Instance.MD5Hash(password) == user.Password)
+                UserEnt user = new UserEnt();
+                user = Storage.Instance.getUser(username);
+                if (user == null || Storage.Instance.MD5Hash(password) != user.Password)
                 {
                     respone.OnFail("Login fail!");
                     return;
@@ -32,7 +32,7 @@ namespace LoginApp.Model
 
         public static void Register(string username, string password, string confirm, IRespone<UserEnt> respone)
         {
-            username.Trim().ToUpper();
+            username = username.Trim().ToUpper();
             UserEnt user = new UserEnt();
             user.Username = username;
             user.Password = password;

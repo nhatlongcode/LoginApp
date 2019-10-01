@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LoginApp.Entities
 {
-    class UserEnt
+    public class UserEnt
     {
         public string Username { get; set; }
 

@@ -9,7 +9,7 @@ using LoginApp.Entities;
 
 namespace LoginApp
 {
-    class Storage
+    public class Storage
     {
         static Storage instance;
         private string path = "User.txt";
@@ -24,7 +24,8 @@ namespace LoginApp
         {
             if (!File.Exists(path))
             {
-                File.Create(path);
+                //File.Create(path);
+                return;
             }
 
             string[] dataFromFile = File.ReadAllLines(path);
@@ -36,7 +37,7 @@ namespace LoginApp
 
         public UserEnt getUser(string username)
         {
-            username.Trim().ToUpper();
+            username = username.Trim().ToUpper();
             if (dict.ContainsKey(username))
             {
                 UserEnt user = new UserEnt();
@@ -52,7 +53,7 @@ namespace LoginApp
             string username = user.Username;
             string password = user.Password;
 
-            username.Trim().ToUpper();
+            username = username.Trim().ToUpper();
             password = MD5Hash(password);
 
             if (dict.ContainsKey(username)) return false;

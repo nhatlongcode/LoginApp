@@ -11,8 +11,8 @@ namespace LoginApp.Respone
 {
     class RegisterRespone : IRespone<UserEnt>
     {
-        ILoginView view;
-        RegisterRespone(ILoginView view)
+        IRegisterView view;
+        public RegisterRespone(IRegisterView view)
         {
             this.view = view;
         }

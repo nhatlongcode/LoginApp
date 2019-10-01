@@ -13,7 +13,7 @@ namespace LoginApp.Presenter
     class LoginPresenter : ILoginPresenter
     {
         ILoginView view;
-        LoginPresenter(ILoginView view)
+        public LoginPresenter(ILoginView view)
         {
             this.view = view;
         }

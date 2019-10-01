@@ -12,7 +12,7 @@ namespace LoginApp.View
 {
     public partial class RegisterView : Form, IRegisterView
     {
-        private Form previous;
+        private Form _previous;
 
         public Form form => this;
         
@@ -20,7 +20,7 @@ namespace LoginApp.View
         public RegisterView(Form previous)
         {
             InitializeComponent();
-            this.previous = previous;
+            this._previous = previous;
         }
 
         public string getUsername()

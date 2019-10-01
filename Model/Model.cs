@@ -30,7 +30,7 @@ namespace LoginApp.Model
             }
         }
 
-        public static void Register(string username, string password, IRespone<UserEnt> respone)
+        public static void Register(string username, string password, string confirm, IRespone<UserEnt> respone)
         {
             username.Trim().ToUpper();
             UserEnt user = new UserEnt();
@@ -38,7 +38,12 @@ namespace LoginApp.Model
             user.Password = password;
             try
             {
-                if (!Storage.Instance.addUser(user))
+                if (user.Password != confirm)
+                {
+                    respone.OnFail("Please confirm again!");
+                    return;
+                }
+                else if (!Storage.Instance.addUser(user))
                 {
                     respone.OnFail("Username existed!");
                     return;

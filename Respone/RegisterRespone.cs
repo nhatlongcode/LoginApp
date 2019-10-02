@@ -19,9 +19,7 @@ namespace LoginApp.Respone
 
         public void OnSuccess(UserEnt data)
         {
-            //INotiView notiView = new NotiView(this.view.form, data);
             this.view.form.Hide();
-            //notiView.form.Show();
             new NotiView(Application.OpenForms[0], data).Show();
         }
 

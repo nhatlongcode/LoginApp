@@ -10,3 +10,5 @@ D:\LoginApp\obj\Debug\LoginApp.pdb
 D:\LoginApp\obj\Debug\LoginApp.View.LoginView.resources
 D:\LoginApp\obj\Debug\LoginApp.View.NotiView.resources
 D:\LoginApp\obj\Debug\LoginApp.View.RegisterView.resources
+D:\LoginApp\bin\Debug\Bunifu_UI_v1.5.3.dll
+D:\LoginApp\obj\Debug\LoginApp.csproj.CopyComplete

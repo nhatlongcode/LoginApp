@@ -33,8 +33,13 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3">
+      <HintPath>C:\Users\nhtlo\Downloads\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Management" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -91,6 +96,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="View\NotiView.resx">
       <DependentUpon>NotiView.cs</DependentUpon>
@@ -111,6 +117,20 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="UI\icons8_play_64px_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\icons8_delete_sign_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\icons8_lock_52px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\icons8_user_male_circle_64px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UI\icons8_lock_48px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

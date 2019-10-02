@@ -20,6 +20,10 @@ namespace LoginApp.View
         public LoginView()
         {
             InitializeComponent();
+            txtUsername.GotFocus += txtUsername_RemoveText;
+            txtUsername.LostFocus += txtUsername_AddText;
+            txtPassword.GotFocus += txtPassword_RemoveText;
+            txtPassword.LostFocus += txtPassword_AddText;
         }
 
         public string getUsername()
@@ -32,17 +36,69 @@ namespace LoginApp.View
             return txtPassword.Text;
         }
 
-        private void RegButton_Click(object sender, EventArgs e)
+
+        private void logButtonClicked()
+        {
+            ILoginPresenter logPresenter = new LoginPresenter(this);
+            logPresenter.DoLogin();
+        }
+
+        private void regButtonClicked()
         {
             this.Hide();
             new RegisterView(this).Show();
-
         }
 
-        private void LogButton_Click(object sender, EventArgs e)
+        public void txtUsername_RemoveText(object sender, EventArgs e)
         {
-           ILoginPresenter logPresenter = new LoginPresenter(this);
-           logPresenter.DoLogin();
+            if (txtUsername.Text == "Username")
+            {
+                txtUsername.Text = "";
+                txtUsername.ForeColor = System.Drawing.Color.Black;
+            }
         }
+
+        public void txtUsername_AddText(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtUsername.Text))
+            {
+
+                txtUsername.ForeColor = Color.FromArgb(64, 64, 64);
+                txtUsername.Text = "Username";
+            }
+        }
+
+        public void txtPassword_RemoveText(object sender, EventArgs e)
+        {
+            txtPassword.UseSystemPasswordChar = true;
+            if (txtPassword.Text == "Password")
+            {
+                txtPassword.Text = ""; 
+                txtPassword.ForeColor = System.Drawing.Color.Black;
+            }
+
+        }
+
+        public void txtPassword_AddText(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPassword.Text))
+            {
+
+                txtPassword.ForeColor = Color.FromArgb(64, 64, 64);
+                txtPassword.UseSystemPasswordChar = false;
+                txtPassword.Text = "Password";
+            }
+            else
+            {
+                txtPassword.UseSystemPasswordChar = true;
+            }
+
+        }
+
+        private void CloseButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

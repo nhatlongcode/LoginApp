@@ -30,15 +30,20 @@ namespace LoginApp.View
             labelUsername.Text = _user.Username;
         }
 
-        protected override void OnClosing(CancelEventArgs e)
-        {
-            base.OnClosing(e);
-            _previous.Show();
-        }
 
         private void NotiView_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void NotiView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           // _previous.Show();
+        }
+
+        private void NotiView_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            _previous.Show();
         }
     }
 }

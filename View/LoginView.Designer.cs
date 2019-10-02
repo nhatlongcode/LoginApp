@@ -70,7 +70,7 @@
             // 
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPassword.Location = new System.Drawing.Point(126, 106);
+            this.txtPassword.Location = new System.Drawing.Point(126, 99);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(156, 32);
             this.txtPassword.TabIndex = 8;
@@ -91,7 +91,7 @@
             this.bunifuImageButton3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.bunifuImageButton3.Image = global::LoginApp.Properties.Resources.icons8_lock_48px;
             this.bunifuImageButton3.ImageActive = null;
-            this.bunifuImageButton3.Location = new System.Drawing.Point(44, 100);
+            this.bunifuImageButton3.Location = new System.Drawing.Point(78, 94);
             this.bunifuImageButton3.Name = "bunifuImageButton3";
             this.bunifuImageButton3.Size = new System.Drawing.Size(47, 40);
             this.bunifuImageButton3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -104,9 +104,9 @@
             this.bunifuImageButton2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
             this.bunifuImageButton2.Image = global::LoginApp.Properties.Resources.icons8_user_male_circle_64px;
             this.bunifuImageButton2.ImageActive = null;
-            this.bunifuImageButton2.Location = new System.Drawing.Point(38, 35);
+            this.bunifuImageButton2.Location = new System.Drawing.Point(75, 35);
             this.bunifuImageButton2.Name = "bunifuImageButton2";
-            this.bunifuImageButton2.Size = new System.Drawing.Size(59, 50);
+            this.bunifuImageButton2.Size = new System.Drawing.Size(50, 51);
             this.bunifuImageButton2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.bunifuImageButton2.TabIndex = 5;
             this.bunifuImageButton2.TabStop = false;
@@ -160,6 +160,7 @@
             this.regButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.regButton.Textcolor = System.Drawing.Color.White;
             this.regButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.regButton.Click += new System.EventHandler(this.RegButton_Click);
             // 
             // logButton
             // 
@@ -195,6 +196,7 @@
             this.logButton.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.logButton.Textcolor = System.Drawing.Color.White;
             this.logButton.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.logButton.Click += new System.EventHandler(this.LogButton_Click);
             // 
             // bunifuDragControl1
             // 

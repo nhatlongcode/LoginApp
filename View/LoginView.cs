@@ -100,5 +100,14 @@ namespace LoginApp.View
             this.Close();
         }
 
+        private void LogButton_Click(object sender, EventArgs e)
+        {
+            logButtonClicked();
+        }
+
+        private void RegButton_Click(object sender, EventArgs e)
+        {
+            regButtonClicked();
+        }
     }
 }

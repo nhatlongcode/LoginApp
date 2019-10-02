@@ -63,6 +63,8 @@
             this.Controls.Add(this.label1);
             this.Name = "NotiView";
             this.Text = "MainView";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.NotiView_FormClosing);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.NotiView_FormClosed);
             this.Load += new System.EventHandler(this.NotiView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
